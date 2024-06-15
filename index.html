@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f5e9a21ce7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="personal-portfolio-img/images/ISHU_logo.png" class="logo"> -->
+                 <H4 class="logo"><span>I</span>shu</H4>
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-xmark fas" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <div>
+                    <p>Frontend Developer</p>
+                    <h1>Hi,I'm <span>Ishu</span> <br> From India</h1>
+                </div>
+                <div class="circle">
+                    <img src="personal-portfolio-img/images/ishu photo.jpg" alt="Your Photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------about------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="personal-portfolio-img/images/me.jpg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                   
+                    <p>
+                        I am currently pursuing a Bachelor of Technology in Computer Science and Engineering at Delhi Technological
+                        University. Having successfully completed my fourth semester, I hold a CGPA of 9.613. My passion lies in coding and
+                        problem-solving, and I take pride in my hardworking nature and commitment to continuous learning and personal
+                        growth.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                      
+                        <ul>
+                            <li><span>Programming Languages</span> C, C++</li>
+                            <li><span>Web Development</span> HTML, CSS, JavaScript</li>
+                            <li><span>Database Management Systems</span> MySQL</li>
+                            <li><span>Development Tools</span> Visual Studio Code</li>
+                            <li><span>Data Structures and Algorithms</span></li>
+                            <li><span>Object-Oriented Programming</span></li>
+                            <li><span>Problem-solving and Critical Thinking Skills</span></li>
+                            <li><span>Team Collaboration and Communication Skill</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Achievements">
+                     
+                        <ul>
+                            <li>Secured AIR 5873 in JEE Mains</li>
+                            <li>Secured AIR 6073 in JEE Advanced</li>
+                            <li>Zone Topper in 12th Class (2021) & Excellence Award from Manish Sisodiya</li>
+                            <li>Solved over 760+ Data Structures and Algorithms (DSA) problems on LeetCode</li>
+                            <li>3 Star At CodeChef</li>
+                            <li>Earned 11 badges on LeetCode, demonstrating proficiency and dedication to problem-solving skills</li>
+                            <li>Under top 6% of participants in LeetCode coding contests, achieving a remarkable contest rating of 1830+</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="education">
+                     
+                        <ul>
+                            <li><span>Bachelors Of Technology - CSE</span><br>Delhi Technological University, 9.613 CGPA, Expected 2026</li>
+                            <li><span>CBSE - XII</span><br>Govt. Boys Senior Secondary School, Mansarovar Park, Delhi. 95%, 2020 - 2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------contact---------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">
+                        Contact Me
+                    </h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:agishu21@gmail.com" id="mail_icon">agishu21@gmail.com</a> </p>
+                    <p><i class="fa-solid fa-square-phone"></i> <a href="tel:+91 9958822847" id="mail_icon">9958822847</a></p>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ishu.aggarwal9958/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ishu-aggarwal-0aa66b263/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/ISHUAGG94687589"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="personal-portfolio-img/ISHU_RESUME.pdf" class="btn btn2" target="_blank">CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name"  placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"
+                        rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Ishu.</p>
+        </div>
+     </div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwX6olZ1jRnNGSwFncwp-DqIwFfAuPEm0tV63aW9YatWtHGmT9OVPrq-_iRsR9bK_jiSg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg");
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML="";
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
