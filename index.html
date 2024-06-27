@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f5e9a21ce7.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
     <div id="header">
         <div class="container">
             <nav>
@@ -17,17 +17,16 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-sharp fa-solid fa-xmark fas" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <div>
-                    <p>Frontend Developer</p>
-                    <h1>Hi,I'm <span>Ishu</span> <br> From India</h1>
+                <div id="content">
+                    <p id="designation">Frontend Developer</p>
+                    <h1 id="head">Hi, I'm <span>Ishu</span> <br> From India</h1>
                 </div>
                 <div class="circle">
                     <img src="personal-portfolio-img/images/ishu photo.jpg" alt="Your Photo">
@@ -41,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="personal-portfolio-img/images/me.jpg">
+                    <img src="personal-portfolio-img/images/ishu photo.jpg">
 
                 </div>
                 <div class="about-col-2">
@@ -49,47 +48,56 @@
                    
                     <p>
                         I am currently pursuing a Bachelor of Technology in Computer Science and Engineering at Delhi Technological
-                        University. Having successfully completed my fourth semester, I hold a CGPA of 9.613. My passion lies in coding and
+                        University. Having successfully completed my fourth semester, I hold a CGPA of 9.63. My passion lies in coding and
                         problem-solving, and I take pride in my hardworking nature and commitment to continuous learning and personal
                         growth.
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Achievements')">Achievements</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')"><span class="aboutMeSubHeading">Skills</span></p>
+                        <p class="tab-links" onclick="opentab('Achievements')"><span class="aboutMeSubHeading">Achievements</span></p>
+                        <p class="tab-links" onclick="opentab('education')"><span class="aboutMeSubHeading">Education</span></p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
-                      
-                        <ul>
-                            <li><span>Programming Languages</span> C, C++</li>
-                            <li><span>Web Development</span> HTML, CSS, JavaScript</li>
-                            <li><span>Database Management Systems</span> MySQL</li>
-                            <li><span>Development Tools</span> Visual Studio Code</li>
-                            <li><span>Data Structures and Algorithms</span></li>
-                            <li><span>Object-Oriented Programming</span></li>
-                            <li><span>Problem-solving and Critical Thinking Skills</span></li>
-                            <li><span>Team Collaboration and Communication Skill</span></li>
-                        </ul>
+    
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png"
+                            alt="" class="skillsImage">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png"
+                        class="skillsImage" alt="">
+                        
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMkTUwAsJdpEDwdsbkc3H4cHppuz2ZOVmdFQ&s"
+                        class="skillsImage" alt="">
+                        <img src="https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo.png" class="skillsImage" id="jsSkill" alt="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+                        class="skillsImage" alt="">
+                  
+                        <img src="https://yt3.googleusercontent.com/h0n8phylgeZKuMlGmcPhkOM8rkV1IHTr5oumqZL581iQCSeMeFrnmYB69a69RQAQoVqgxM5ENX8=s900-c-k-c0x00ffffff-no-rj"
+                        class="skillsImage" alt="">
+                
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOoQSigP-x01Rb5ybPXUmN1__6YBYea2lotQ&s"
+                        class="skillsImage" alt="">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png"
+                        class="skillsImage" alt="">
                     </div>
                     <div class="tab-contents" id="Achievements">
                      
                         <ul>
-                            <li>Secured AIR 5873 in JEE Mains</li>
-                            <li>Secured AIR 6073 in JEE Advanced</li>
-                            <li>Zone Topper in 12th Class (2021) & Excellence Award from Manish Sisodiya</li>
-                            <li>Solved over 760+ Data Structures and Algorithms (DSA) problems on LeetCode</li>
-                            <li>3 Star At CodeChef</li>
-                            <li>Earned 11 badges on LeetCode, demonstrating proficiency and dedication to problem-solving skills</li>
-                            <li>Under top 6% of participants in LeetCode coding contests, achieving a remarkable contest rating of 1830+</li>
+                            <li>Secured AIR 5873 in JEE Mains.</li>
+                            <li>Secured AIR 6073 in JEE Advanced.</li>
+                            <li>Zone Topper in 12th Class (2021) & Excellence Award from Manish Sisodia.</li>
+                            <li>Currently 3 Star rated coder at CodeChef (1735 max).</li>
+                            <li>Solved 850+ DSA problems and earned 12+ badges on LeetCode; ranked in the top 6% (1845 max).</li>
+                            <li>Ranked 146th in CodeChef Starters 133, showcasing strong performance and adeptness in DSA.</li>
                         </ul>
+
 
                     </div>
                     <div class="tab-contents" id="education">
                      
                         <ul>
-                            <li><span>Bachelors Of Technology - CSE</span><br>Delhi Technological University, 9.613 CGPA, Expected 2026</li>
-                            <li><span>CBSE - XII</span><br>Govt. Boys Senior Secondary School, Mansarovar Park, Delhi. 95%, 2020 - 2021</li>
+                            <li><span>Bachelors Of Technology - CSE</span><br>Delhi Technological University, 9.63 CGPA, Expected 2026</li>
+                            <li><span>CBSE - XII</span><br>Govt. Boys Senior Secondary School, Mansarovar Park, Delhi. 94.8%, 2020 - 2021</li>
+                            <li><span>CBSE - XI</span><br>Govt. Boys Senior Secondary School, East Of Loni Road, Delhi. 84.17%, 2020 - 2021</li>
                         </ul>
                     </div>
                 </div>
@@ -97,6 +105,61 @@
         </div>
     </div>
 
+
+    <!-----------project----------->
+
+    <h1 id="projects" style="text-align: center;">My Projects</h1>
+
+    <div class="project">
+        <div class="sudoku">
+            <div class="projectImage">
+                <img src="personal-portfolio-img/images/Sudoku.png" alt="" class="imagePro">
+            </div>
+            <div class="projectText">
+                <h1 style="text-align: center;">Sudoku Solver Game</h1>
+                
+                <p>
+                    Built a dynamic Sudoku Solver app using HTML, CSS, and JavaScript.
+                    <br>
+                    Enhanced user experience by 30% and reduced puzzle solution errors by 95%.
+                    <br>
+                    Successfully tested with 15 users, improving based on their feedback.
+                    Demonstrated strong proficiency in DSA, achieving a 95% success rate.
+                </p>
+                <div class="LivePreviewContainer">
+                    <a href="https://github.com/ISHU9958/sudoku_solver" target="_blank"><img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" alt="" class="githubIcon"></a>
+
+                    <a href="https://ishu9958.github.io/sudoku_solver/" class="live"target="_blank">Live</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="amazone">
+            <div class="projectImage">
+            <img src="personal-portfolio-img/images/Amazon.png" alt="" class="imagePro">
+            
+            </div>
+            <div class="projectText">
+                <h1 style="text-align: center;">Amazon Clone</h1>
+                
+                <p>
+                    Developed an Amazon clone with key features like product listings and shopping cart operations, supporting up to 1000
+                    products.
+                    <br>
+                    Ensured a responsive and user-friendly interface with page load times under 1 second.
+                    <br>
+                    Built using HTML, CSS, and JavaScript.
+                </p>
+                <div class="LivePreviewContainer">
+                    <a href="https://github.com/ISHU9958/amazon_clone"target="_blank"><img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" alt=""
+                            class="githubIcon"></a>
+                    <a href="https://ishu9958.github.io/amazon_clone/" class="live" target="_blank">Live</a>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
     <!-- ----------contact---------- -->
      <div id="contact">
         <div class="container">
@@ -128,7 +191,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright &copy; Ishu.</p>
+            <p>Copyright &copy; <span id="current-year"></span> Ishu.</p>
         </div>
      </div>
 
@@ -146,6 +209,14 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+            const yearSpan = document.getElementById('current-year');
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+        });
+
 </script>
 <script>
     var sidemenu=document.getElementById("sidemenu");

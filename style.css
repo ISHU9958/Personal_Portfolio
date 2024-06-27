@@ -19,6 +19,9 @@ body{
 .container{
     padding:10px 10%;
 }
+.highlight{
+    color:red;
+}
 nav{
     display:flex;
     align-items: center;
@@ -34,7 +37,7 @@ nav{
 }
 h4 span{
     
-     color:blue;
+     color:#ff004f;
 }
 
 nav ul li{
@@ -67,6 +70,7 @@ nav ul li a:hover::after{
     font-size:30px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .header-text h1{
     font-size:60px;
@@ -76,9 +80,9 @@ nav ul li a:hover::after{
     color:#ff004f;
 }
 .circle {
-    width: 250px;
+    width: 500px;
     /* Adjust the size as needed */
-    height: 250px;
+    height: 500px;
     /* Adjust the size as needed */
     border-radius: 50%;
     overflow: hidden;
@@ -87,6 +91,9 @@ nav ul li a:hover::after{
     margin-top: -50px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:absolute;
+    right:-100px;
+    top: -150px;
 }
 
 .circle img {
@@ -150,7 +157,7 @@ nav ul li a:hover::after{
 }
 
 .tab-links.active-link::after{
-    width:50%;
+    width:100%;
 }
 .tab-contents ul li{
     list-style: none;
@@ -165,6 +172,136 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display:block;
+}
+
+.skillsImage{
+    width:100px;
+    height:100px;
+    margin:4px;
+    display: inline-block;
+        transition: transform 0.3s ease;
+}
+.skillsImage:hover{
+    animation: bounce 0.5s linear;
+}
+.aboutMeSubHeading{
+    font-size: 26px;
+    display: inline-block;
+     transition: transform 0.3s ease;
+
+}
+.aboutMeSubHeading:hover{
+    /* transform: translateY(-5px); */
+    animation: bounce 0.5s linear;
+    color:#fff;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/*---------Projects--------*/
+.project{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.sudoku{
+    width:100%;
+    height:40%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.amazone{
+    width:100%;
+    height:40%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+.projectImage{
+    width:40%;
+    height:100%;
+    /* background-color:green; */
+}
+.imagePro{
+    width:100%;
+    height:100%;
+    display: inline-block;
+    margin-left:2%;
+    transition: transform 0.5s ease;
+    z-index: 2;
+    /* box-shadow: 10px 10px 10px 10px #ff004f; */
+}
+.imagePro:hover{
+    animation: bounce 2s linear;
+}
+.projectText{
+    width: 50%;
+    height:100%;
+    background-color: black;
+    box-sizing: border-box;
+    padding:65px;
+    margin-right:2%;
+    box-shadow: 10px 10px 10px 10px red;
+    border-radius: 10px;
+    display: inline-block;
+        transition: transform 0.5s ease;
+    
+    /* z-index: 2; */
+
+}
+.projectText:hover{
+    animation: bounce 2s linear;
+}
+
+.githubIcon{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.LivePreviewContainer{
+    padding-top:5px;
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+}
+.live{
+    position: absolute;
+    right:10%;
+    top:30%;
+    font:bolder;
+    text-decoration: none;
+    font-size: 20px;
+    color:red;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+
+.live:hover {
+    /* transform: translateY(-5px); */
+    animation: bounce 0.5s linear;
+    color: yellow;
+}
+.githubIcon:hover{
+    animation: bounce 0.5s linear;
 }
 
 /* ----------contact----------- */
