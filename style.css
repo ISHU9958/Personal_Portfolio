@@ -179,7 +179,9 @@ nav ul li a:hover::after{
     height:100px;
     margin:4px;
     display: inline-block;
-        transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    border-radius: 30%;
+    overflow: hidden;
 }
 .skillsImage:hover{
     animation: bounce 0.5s linear;
@@ -257,14 +259,18 @@ nav ul li a:hover::after{
     background-color: black;
     box-sizing: border-box;
     padding:65px;
+    /* padding-top:50px; */
     margin-right:2%;
     box-shadow: 10px 10px 10px 10px red;
     border-radius: 10px;
     display: inline-block;
         transition: transform 0.5s ease;
-    
+    overflow: scroll;
     /* z-index: 2; */
 
+}
+.projectText::-webkit-scrollbar {
+    display: none;
 }
 .projectText:hover{
     animation: bounce 2s linear;
@@ -308,6 +314,9 @@ nav ul li a:hover::after{
 #mail_icon{
     text-decoration: none;
     color:white;
+}
+.contact{
+    width:100vw;
 }
 .contact-left{
     flex-basis: 35%;
@@ -388,7 +397,8 @@ form .btn2{
     width:100%;
     text-align:center;
     padding:25px 0;
-    background: #262626;
+    /* background: #262626; */
+    /* background-color: black; */
     font-weight: 300;
     margin-top: 20px;
 }
@@ -398,7 +408,7 @@ form .btn2{
 nav .fas{
     display:none;
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width:690px){
     .header-text{
         margin-top:100%;
         font-size: 16px;
@@ -409,6 +419,8 @@ nav .fas{
     nav .fas {
         display: block;
         font-size: 25px;
+        position: absolute;
+        right:0px;
     }
     nav ul{
         background:#ff004f;
@@ -416,7 +428,7 @@ nav .fas{
         top:0;
         right:-200px;
         width: 200px;
-        height: 100vh;
+        height: 100%;
         padding-top:50px;
         z-index:2;
         transition: right 0.5s;
@@ -434,6 +446,7 @@ nav .fas{
     }
     .sub-title{
         font-size:40px;
+        padding-left:80px;
     }
     .about-col-1,.about-col-2{
         flex-basis:100%;
@@ -456,8 +469,78 @@ nav .fas{
     .copyright{
         font-size:14px;
     }
-}
+    .circle{
+        width:200px;
+        height:200px;
+        top:-30px;
+    }
 
+    .sudoku{
+        height: 42vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left:50px;
+
+    }
+    .amazone{
+        height: 40vh;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 50px;
+    }
+    .projectImage{
+        width: 100%;
+        height: 50%;
+    }
+    .projectText{
+        width: 100%;
+        height:50%;
+        font-size: 10px;
+        padding:20px;
+        padding-top:2px;
+        box-shadow: 0px 10px red;
+    }
+    .githubIcon{
+        width: 35px;
+        height: 35px;
+        position:absolute;
+        top:0%;
+    }
+    .live{
+        right:0%;
+    }
+    .about-col-1{
+        padding-left:50px;
+    }
+
+        
+}
+@media only screen and (min-width:601px) and (max-width:1410px) {
+    /* .circle {
+            width: 400px;
+            height: 400px;
+            top: 10px;
+            right:15px;
+        } */
+
+                .header-text{
+                    display:flex;
+                    flex-direction: column;
+                    
+
+                }
+                .circle{
+                    position: absolute;
+                    width:200px;
+                    height: 200px;
+                    top:50px;
+                    right:30px;
+                }
+
+
+}
 #msg{
     color:#61b752;
     margin-top:-40px;
